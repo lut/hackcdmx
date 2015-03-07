@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  resources :users
+  get 'fillup_users', to: 'users#fillup'
+
   resources :trips
 
+
   root 'trips#index'
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

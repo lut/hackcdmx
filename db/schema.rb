@@ -11,19 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150306225913) do
+ActiveRecord::Schema.define(version: 20150307055350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "trips", force: true do |t|
-    t.integer  "customer_id"
     t.integer  "bike_id"
     t.datetime "date_removed"
     t.integer  "station_removed"
     t.datetime "date_arrived"
     t.integer  "station_arrived"
     t.string   "action"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "gender"
+    t.integer  "age"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
