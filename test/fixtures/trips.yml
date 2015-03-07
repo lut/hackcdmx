@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 1
+  bike_id: 1
+  date_removed: 2015-03-06 16:59:13
+  station_removed: 1
+  date_arrived: 2015-03-06 16:59:13
+  station_arrived: 1
+  action: MyString
+
+two:
+  customer_id: 1
+  bike_id: 1
+  date_removed: 2015-03-06 16:59:13
+  station_removed: 1
+  date_arrived: 2015-03-06 16:59:13
+  station_arrived: 1
+  action: MyString
