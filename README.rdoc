@@ -6,7 +6,7 @@ Cómo funciona?
 
 1. Ingresa tu ID de usuario ecobici
 
-2. Boom! Listo es sistema te propone una ruta para el día de hoy con eventos cercanos a la hora de consulta. 
+2. Listo! El sistema te propone una ruta para el día de hoy con eventos cercanos a la hora de consulta. 
 
 
 Tablas de datos
