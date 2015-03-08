@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Latitude</th>
       <th>Longitude</th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @places.each do |place| %>
       <tr>
+        <td><%= place.id %></td>
         <td><%= place.name %></td>
         <td><%= place.latitude %></td>
         <td><%= place.longitude %></td>

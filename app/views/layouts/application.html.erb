@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hackcdmx</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>EcoRuta</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!-- Fixed Navigation Bar ==========-->
+	 <div class="navbar navbar-inverse navbar-fixed-top">
+    	<div class="container">
+      <div class= "navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-<%= yield %>
+        <a href="/" class="navbar-brand"><span class="icon-gift"></span>EcoRuta</a>
+      </div>
+
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+		
+					<li><%= link_to "FAQS", new_user_path, class: "icon-wondering" %></li>
+					<li><%= link_to "Términos y Condiciones", trips_path, class: "icon-books" %></li> 
+		</ul>
+      </div>
+    </div>
+  </div>
+
+<!-- Flash Messagges====-->
+<br>
+<div class="container">
+	<% flash.each do | type, message | %>
+			<div class="alert <%= flash_class type %>">
+ 			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  			<%= message %>
+		</div>
+		<% end %>
+		<br>
+	<%= yield %>
+</div>
+
+
+<!--Bottom Nav Bar-->
+
+	<div id="footer">
+
+
+	<div class="col-xs-12 navbar-custom navbar-inverse navbar-fixed-bottom">
+		<div class="row navbar-custom" id="bottomNav">
+			<a href="/merchants"><div class="col-xs-4 text-center <%= 'active' if params[:controller] == 'merchants' %> ">Comercios</div></a>
+			<a href="/credits"><div class="col-xs-4 text-center <%= 'active' if params[:controller] == 'credits' %>">Creditos</div></a>
+			<a href="/profiles"><div class="col-xs-4 text-center <%= 'active' if params[:controller] == 'profiles' %>">Usuarios</div></a>
+		</div>
+	</div>
+
+
+
+
+
+			
+
+
+	</div>
+
 
 </body>
 </html>

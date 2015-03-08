@@ -1,28 +1,23 @@
-== README
+== EcoRuta
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+La ciudad está llena de rincones y eventos que todos queremos descubrir. Pero la realidad es que la rutina nos absorbe. Queremos ofrecer una app que te conoce a tí y a la ciudad. EcoRuta sabe a donde vas y lo que te gusta. EcoRuta te ayuda a escaparte de la rutina a través de una propuesta personalizada en base a tu horario y recorrido en bici. 
 
-Things you may want to cover:
+Cómo funciona?
 
-* Ruby version
+1. Ingresa tu ID de usuario ecobici
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+2. Boom! Listo es sistema te propone una ruta para el día de hoy con eventos cercanos a la hora de consulta. 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Tablas de datos
+
+* Usuarios de Ecobici (Fuente: API Ecobici)
+
+* Histórico de viajes Ecobici (Fuente: API Ecobici)
+
+* Listado de estaciones Ecobici (Fuente: API Ecobici)
+
+* Lugares & Eventos (Fuentes: TimeOut, Meetup, LPBL, Tiempo Libre...)
+
+
+Lenguajes: Ruby (webapp) & Java (mobile app)
