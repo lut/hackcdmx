@@ -12,7 +12,6 @@ class UsersController < ApplicationController
   def show
     @trip_count = Trip.where(user_id: @user.id).count
 
-    render json: @user
   end
 
   # GET /users/new
