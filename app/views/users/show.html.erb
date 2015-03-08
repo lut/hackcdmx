@@ -15,5 +15,9 @@
   <%= @user.age %>
 </p>
 
+<p>
+	<strong>El usuario <%= @user.id %> ha hecho <%= @trip_count %> viajes</strong>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
