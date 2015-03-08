@@ -63,6 +63,21 @@ class UsersController < ApplicationController
     
   end
 
+  def csv_upload
+
+    require 'csv'    
+
+      customers = CSV.read(Rails.root.join('customers.csv'))
+
+      customers = CSV.parse(customers, :headers => true)
+      customers.each do |row|
+        Moulding.create!(row.to_hash)
+      end
+
+    redirect_to users_url
+
+  end
+
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update

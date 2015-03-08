@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
   resources :users
-  get 'fillup_users', to: 'users#fillup'
-
   resources :trips
-
 
   root 'trips#index'
 

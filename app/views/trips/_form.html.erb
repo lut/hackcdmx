@@ -1,45 +1,4 @@
-<%= form_for(@trip) do |f| %>
-  <% if @trip.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
-
-      <ul>
-      <% @trip.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :bike_id %><br>
-    <%= f.number_field :bike_id %>
-  </div>
-  <div class="field">
-    <%= f.label :date_removed %><br>
-    <%= f.datetime_select :date_removed %>
-  </div>
-  <div class="field">
-    <%= f.label :station_removed %><br>
-    <%= f.number_field :station_removed %>
-  </div>
-  <div class="field">
-    <%= f.label :date_arrived %><br>
-    <%= f.datetime_select :date_arrived %>
-  </div>
-  <div class="field">
-    <%= f.label :station_arrived %><br>
-    <%= f.number_field :station_arrived %>
-  </div>
-  <div class="field">
-    <%= f.label :action %><br>
-    <%= f.text_field :action %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for @trip do |f| %>
+  <%= f.input :user_id, label: 'Usuario', collection: User.all %>
+  <%= f.button :submit %>
 <% end %>
