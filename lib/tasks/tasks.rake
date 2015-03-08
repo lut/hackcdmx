@@ -1,6 +1,21 @@
 namespace :tasks do
 	require 'csv'
 
+	desc "cargar lugares"
+	task :load_places => :environment do |t, arg|
+		places_file =['lib/datasets/places.csv']
+		places_file.each do |place|
+			CSV.foreach(place,:headers => true) do |row|
+				name = row.to_hash['name']
+				latitude = row.to_hash['latitude']
+				longitude = row.to_hash['longitude']
+				category = row.to_hash['category']
+				
+				Place.create(name: name, latitude: latitude, longitude: longitude, category: category )
+			end	
+		end	
+	end	
+
 	desc "cargar usuarios"
 	task :load_usuarios => :environment do |t, arg|
 		user_files =['lib/datasets/customers.csv']

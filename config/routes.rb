@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :places
+
+  resources :stations
+
   resources :users
   resources :trips
 

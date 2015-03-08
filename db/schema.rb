@@ -11,10 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150308010207) do
+ActiveRecord::Schema.define(version: 20150308055842) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "places", force: true do |t|
+    t.string   "name"
+    t.string   "latitude"
+    t.string   "longitude"
+    t.string   "category"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stations", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "addressNumber"
+    t.string   "zipCode"
+    t.string   "districtCode"
+    t.string   "districtName"
+    t.string   "location"
+    t.string   "stationType"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "trips", force: true do |t|
     t.integer  "bike_id"
